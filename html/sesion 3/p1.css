@@ -1,0 +1,47 @@
+.c0{
+
+
+   /* height: 600px;*/
+   width:600
+
+}
+
+.c1{
+    border:5px solid blue;
+    border-style: dotted;
+    background-color: orange;
+    float:left;
+    background-image: url("room.jpg");
+    background-repeat: repeat-y;
+    background-size: 50px 35px;
+    height:300px;
+    width: 50%;
+    float:left;
+    margin-right:5px;
+
+}
+.c2{
+    border:5px solid blue;
+    border-style: dotted;
+    background-color: orange;
+    float:left;
+    background-image: url("room.jpg");
+    background-repeat: repeat-y;
+    background-size: 50px 35px;
+    height: 300px;
+    width: 50%;
+    float: right;
+    margin-left:5px;
+
+}
+
+.tx1{
+    color: blue;
+    padding-left: 60px;
+}
+
+.im1{
+
+
+
+}
