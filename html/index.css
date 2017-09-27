@@ -6,3 +6,11 @@
     /*height:200px; */
     text-align:center;
 }
+header, footer{
+    background-color:steelBlue;
+    color:white;
+    text-align:center;
+}
+h1,h2{
+
+}
