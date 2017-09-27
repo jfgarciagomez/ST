@@ -15,8 +15,8 @@
     background-repeat: repeat-y;
     background-size: 50px 35px;
     height:300px;
-    width: 50%;
-    float:left;
+    width: 285px;
+    /*float:left;
     margin-right:5px;
 
 }
@@ -29,19 +29,44 @@
     background-repeat: repeat-y;
     background-size: 50px 35px;
     height: 300px;
-    width: 50%;
+    width: 45%;
     float: right;
     margin-left:5px;
-
+*/
 }
 
 .tx1{
     color: blue;
-    padding-left: 60px;
+    /*padding-left: 60px;*/
+    font-size: 120%;
+    text-decoration: underline;
+    text-align: center;
+}
+.art{
+    padding-l=60px;
+    column-count:2;
 }
 
-.im1{
+table, tr, td{
+    border: 1px solid blue;
+    border-collapse: collapse;
+    table-layout: auto;
+}
 
+.t1{
+    border: 1px solid black;
+    border-collapse: collapse;
+
+}
+
+img{
+    width:70px;
+    height:70px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+    /*align: center;
+*/
 
 
 }
