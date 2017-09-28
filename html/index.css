@@ -6,11 +6,37 @@
     /*height:200px; */
     text-align:center;
 }
+.nav{
+    background-color:orange;
+    width:100%;
+}
+.divNav1{
+    background-color:orange;
+    width:50%;
+    text-align:center;
+}
+.divNav2{
+    background-color:Darkorange;
+    width:50%;
+    text-align:left;
+}
 header, footer{
     background-color:steelBlue;
     color:white;
     text-align:center;
 }
-h1,h2{
-
+.dHab{
+    background-color:blue;
+    color:white;
+}
+.dSen{
+    background-color:blue;
+    color:white;
+}
+.a1{
+    color: white;
+}
+.img1{
+    width:100px;
+    height:px;
 }
