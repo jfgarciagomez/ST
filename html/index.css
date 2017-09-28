@@ -1,3 +1,12 @@
+header, footer{
+    background-color:steelBlue;
+    color:white;
+    text-align:center;
+}
+.h2{
+    text-align:center;
+    color:hotpink;
+}
 .men1{
     background-color:orange;
     position: absolute;
@@ -20,18 +29,18 @@
     width:50%;
     text-align:left;
 }
-header, footer{
-    background-color:steelBlue;
-    color:white;
-    text-align:center;
-}
+
 .dHab{
     background-color:blue;
     color:white;
+    width:50%
+    float:left;
 }
 .dSen{
-    background-color:blue;
+    background-color:steelBlue;
     color:white;
+    width:50%
+    float:right;
 }
 .a1{
     color: white;
