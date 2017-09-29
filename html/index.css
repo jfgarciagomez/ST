@@ -33,13 +33,20 @@ header, footer{
 .dHab{
     background-color:blue;
     color:white;
-    width:50%
+    width:50%;
     float:left;
 }
+/* .primera{
+    border: 1px white;
+   cellpadding="10";
+    cellspacing="5";
+    width="200";
+    color:white";
+}*/
 .dSen{
     background-color:steelBlue;
     color:white;
-    width:50%
+    width:50%;
     float:right;
 }
 .a1{
@@ -49,3 +56,28 @@ header, footer{
     width:100px;
     height:px;
 }
+
+table{
+    border: 2px solid white;
+    /*border-collapse: collapse;*/
+    table-layout: auto;
+    color: white;
+}
+
+tr{
+    margin: 10px;
+    border: 1px white;
+    border-style: dashed;
+    cellpadding
+}
+td{
+    border: 1px white;
+    border-style: dashed;
+    margin: 10px;
+}
+th{
+/*    border: 1px white;
+    border-style: dashed;
+    cellpadding:10 px;
+    margin: 100px;
+*/}
