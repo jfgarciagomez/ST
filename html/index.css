@@ -3,6 +3,9 @@ header, footer{
     color:white;
     text-align:center;
 }
+h1{
+    background-color:black;
+}
 .h2{
     text-align:center;
     color:hotpink;
