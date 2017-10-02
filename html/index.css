@@ -4,7 +4,8 @@ header, footer{
     text-align:center;
 }
 h1{
-    background-color:black;
+    margin:0px;
+    padding:1px;
 }
 .h2{
     text-align:center;
@@ -19,40 +20,45 @@ h1{
     text-align:center;
 }
 .nav{
-    background-color:orange;
     width:100%;
-    height:10%;
+    eight:100px;
 }
 .divNav1{
+    float:left;
     background-color:orange;
+    color:orange;
     width:50%;
     text-align:center;
+    height:22px;
+
 }
 .divNav2{
+    float:right;
     background-color:Darkorange;
     width:50%;
     text-align:left;
+    height:22px;
+}
+.tx1{
+    margin:0px;
+    padding:1px;
 }
 
 .dHab{
     background-color:blue;
     color:white;
     width:50%;
-    height:70%;
+    height:350px;
     float:left;
 }
-/* .primera{
-    border: 1px white;
-   cellpadding="10";
-    cellspacing="5";
-    width="200";
-    color:white";
-}*/
+ul{
+    margin-left: 10px;
+}
 .dSen{
     background-color:blue;
     color:white;
     width:50%;
-    height:70%;
+    height:350px;
     float:right;
 }
 .a1{
