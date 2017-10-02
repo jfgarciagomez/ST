@@ -48,7 +48,7 @@ h1{
     background-color:blue;
     color:white;
     width:50%;
-    height:350px;
+    height:260px;
     float:left;
 }
 ul{
@@ -58,15 +58,15 @@ ul{
     background-color:blue;
     color:white;
     width:50%;
-    height:350px;
+    height:260px;
     float:right;
 }
 .a1{
     color: white;
 }
 .img1{
-    width:100px;
-    height:px;
+    width:px;
+    height:80px;
 }
 
 table{
