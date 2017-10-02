@@ -1,3 +1,5 @@
+/*index.css*/
+/***************************   CONFIG.HTML ***********************/
 header, footer{
     background-color:steelBlue;
     color:white;
@@ -45,7 +47,7 @@ h1{
 }
 
 .dHab{
-    background-color:blue;
+    background-color:darkBlue;
     color:white;
     width:50%;
     height:260px;
@@ -55,7 +57,7 @@ ul{
     margin-left: 10px;
 }
 .dSen{
-    background-color:blue;
+    background-color:darkBlue;
     color:white;
     width:50%;
     height:260px;
@@ -96,4 +98,25 @@ th{
     border-style: dotted;
     cellpadding:10 px;
     margin: 100px;
+}
+/***************************   CONFIG.HTML ***********************/
+.divNavC1{
+    float:left;
+    background-color:orange;
+    color:orange;
+    width:100%;
+    text-align:center;
+    height:22px;
+
+}
+
+.colum{
+    column-count:2;
+}
+
+.dHabC1{
+    background-color:darkBlue;
+    color:white;
+    width:100%;
+    height:260px;
 }

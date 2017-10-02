@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <meta charset="utf-8">
+        <title> "Smart Room Proyect" </title>
+    </head>
+    <body>
+
+        <header>
+            <h1>
+              Smart Room Proyect
+            </h1>
+        </header>
+        <div class="dHabC1">
+            <p class="colum">
+                <form id="f1" action="/action_page.php">
+                    Datos de la habitación
+                    <br>
+                    País:<input type="text" name="pais">
+                    <br>
+                    Ciudad:<input type="text" name="ciudad">
+                    <br>
+                    Coordenadas GPS:<input type="text" name="gps">
+                    <br>
+                    Mapa URL:<input type="url" name="map">
+                    <br>
+                    Coordenadas GPS:<input type="text" name="gps">
+                    <br>
+                    Foto:
+                    <br>
+                    <input type="file" name="foto">
+                    <br>Password: <input type="password" name="pass">
+                    ___________________________________________________
+                    <br>
+                    <input type="submit" value="Enviar datos">
+                    <br>
+
+                    Selecione los sensores
+                    <br>
+
+                    <input type="checkbox" name="Sensores" value="temp"> Temperatura
+                    <br>
+                    <input type="checkbox" name="Sensores" value="hum"> Humedad
+                    <br>
+                    <input type="checkbox" name="Sensores" value="son"> Nivel de sonido
+                    <br>
+                    <input type="checkbox" name="Sensores" value="luz"> Nivel de luz
+                    <br>
+                    <input type="checkbox" name="Sensores" value="mov"> Movimiento
+                    <br>
+                    Configura alertas
+                    <br>
+                    Temperatura Máxima
+                    <br>
+                    <input type="number" id="tmax" name="tmax" value="40">
+                    <br>
+                    Temperatura mínima
+                    <br>
+                    <input type="number" id="tmin" name="tmin" value="0">
+
+
+
+                </form>
+            </p>
+        </div>
+        <nav class="nav">
+            <div class="divNavC1" style="width=100%">
+                 <p class="tx1" id="span iz">
+                     <a href="/index.html">Volver a la página principal</a>
+                 </p>
+            </div>
+        </nav>
+        <footer>
+            <h2>
+              Universidad de Alcala
+            </h2>
+        </footer>
+    </body>
+</html>
