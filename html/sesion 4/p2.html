@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        Texto: <input type="text" id="myText" value="Mickey">
+        <button onclick="myFunction()">Try it</button>
+        <p>tu texto en vertical es:</p>
+        <p id="demo"></p>
+        <script>
+        function myFunction() {
+            var x = document.getElementById("myText");
+            var st = x.value;
+            var i = 0;
+            var s="";
+            for (i=0;i < st.length; i=i+1){
+                s=s + st.charAt(i);
+                s=s+"<br>";
+            }
+            document.getElementById("demo").innerHTML = s;
+        }
+        </script>
+    </body>
+</html>

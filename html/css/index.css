@@ -127,7 +127,7 @@ th{
     height:265px;
 }
 
-form{
+.f1{
     column-count: 2;
     column-rule:2px groove orange;
     height:100%;
@@ -155,4 +155,12 @@ hr {
     width:50%;
     float:right;
     text-align:center;
+}
+/***************************   MINOMBRE.HTML ***********************/
+.f2{
+    text-align:center;
+    height:100%;
+}
+.divM{
+    width:300px
 }

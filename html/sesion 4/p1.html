@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <meta charset="utf-8">
+        <title> "Smart Room Proyect" </title>
+    </head>
+    <body>
+        <form id="f1"  oninput="dif.value=parseInt(tmax.value)+parseInt(tmin.value)">
+            Temperatura máxima
+            <br>
+            <input type="number" id="tmax" name="tmax" value="22" max="0">
+            <br>
+            Temperatura mínima
+            <br>
+            <input type="number" id="tmin" name="tmin" value="22" min="0" >
+            <br>
+            Resultado de la suma:
+            <br>
+            <output name="dif" for="tmax tmin"></output>º
+        </form>
+    </body>
+</html>
