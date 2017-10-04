@@ -1,9 +1,14 @@
-<!--minombre.html-->
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <meta charset="utf-8">
         <title> "Mi nombre" </title>
+        <!--<script>
+            function funcion{
+                var fname = document.getElementById("nombre");
+                document.getElementById("demo").innerHTML = "Bienvenido: " + fname.value;
+            }
+        </script>-->
     </head>
     <body>
         <header>
@@ -12,32 +17,27 @@
             </h1>
         </header>
         <div class="dHabC1">
-            <form class="f2" id="f2" action="index.html" method="post" enctype="multipart/form-data">
-                <h2 class="h2C1" style="margin=1">Introducción de datos personales</h2>
-                <div>
+            <form class="f2" id="f2" action="index.html">
+                <h2 class="h2M1" style="margin=1">Introducción de datos personales</h2>
+                <div class="N1">
                     <br>
                     Nombre:<input type="text" name="nombre" id="nombre"/>
                     <br>
-                    Foto:
+                    <br>
                     <br>
                 </div>
-                <input class="boton" type="file" name="archivo"/>
-                <?php
-                    if($_POST['subir']){
-                        $archivo = $_FILES['archivo']['name'];
-                        $tmp = $_FILES['archivo']['tmp_name'];
-                        $destino = "http://172.22.43.41/images/".$archivo;
-                        @move_uploaded_file($tmp,$destino);
-                        }
-                ?>
+                Foto:
+                <br>
+                <br>
+                <input class="boton" type="file" name="foto"/>
                 <br>
                 <br>
                 <br>
+                <input class="botonM1" type="submit" value="Enviar datos"/>
                 <br>
-                <br>
-                <input class="boton" type="submit" value="Enviar datos" style="float:right; margin-right:20%"/>
-                <br>
+
             </form>
+
         </div>
         <nav class="nav">
             <div class="divNavC1" style="width=100%">

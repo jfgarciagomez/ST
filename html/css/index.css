@@ -1,5 +1,8 @@
 /*index.css*/
 /***************************   CONFIG.HTML ***********************/
+body{
+    margin:1px;
+}
 header, footer{
     background-color:steelBlue;
     color:white;
@@ -164,3 +167,16 @@ hr {
 .divM{
     width:300px
 }
+.botonM1{
+    border-radius:5px;
+    float:right;
+    margin-right:20%;
+}
+.N1{
+    padding:2px;
+}
+.h2M1{
+    text-align:center;
+    color:hotpink;
+    margin:0px;
+    padding:0;
