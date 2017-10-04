@@ -5,7 +5,6 @@
         <title> "Smart Room Proyect" </title>
     </head>
     <body>
-
         <header>
             <h1>
               Smart Room Proyect
@@ -42,9 +41,8 @@
             </div>
             <div class="dSen">
                 <div class="primera">
+                    <p id="nombr"></p>
                     <h2 class="h2">Datos de los sensores</h2>
-                    <br>
-                    <br>
                     <div>
                         <table>
                             <tbody>
@@ -85,5 +83,14 @@
               Universidad de Alcala
             </h2>
         </footer>
+         <script>
+            a =" hola";
+            a = location.search;
+            a = a.substring(1);
+            dat = a.split("&");
+            nom = dat[0].split("=");
+            fto = dat[1].split("=");
+            document.getElementById("nombr").innerHTML = "Hola " + nom[1]+ ": Bienvenido a smartroom.";
+        </script>
     </body>
 </html>
