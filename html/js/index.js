@@ -8,3 +8,12 @@ function mostrarN(dir){
     salida = "Hola " + nom[1]+ ": Bienvenido a smartroom.";
     return  salida;
 }
+function aumentar(imag) {
+    imag.style.height = "120px";
+    imag.style.width = "px";
+}
+
+function normal(imag) {
+    imag.style.height = "80px";
+    imag.style.width = "px";
+}
