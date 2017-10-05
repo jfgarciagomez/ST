@@ -4,8 +4,8 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <meta charset="utf-8">
         <title> "Smart Room Proyect" </title>
-        <script type="text/javascript" src="index.js"></script>
-        <link rel="icon" type="image/png" href="/images/sensoraz.png" />
+        <script type="text/javascript" src="js/index.js"></script>
+        <link rel="icon" type="image/png" href="images/sensoraz.png" />
     </head>
     <body>
         <header>
@@ -87,13 +87,7 @@
             </h2>
         </footer>
          <script>
-            a =" hola";
-            a = location.search;
-            a = a.substring(1);
-            dat = a.split("&");
-            nom = dat[0].split("=");
-            fto = dat[1].split("=");
-            document.getElementById("nombr").innerHTML = "Hola " + nom[1]+ ": Bienvenido a smartroom.";
+            document.getElementById("nombr").innerHTML = mostrarN(location.search);
         </script>
     </body>
 </html>
