@@ -17,3 +17,13 @@ function normal(imag) {
     imag.style.height = "80px";
     imag.style.width = "px";
 }
+
+function diferencia (max, min){
+    if(max<=min){
+        return err="La temperatura mínima debe ser menor que la máxima";
+    }
+    else{
+        num = max-min;
+        return dif="Diferencia: "+ num.toString()+"º";
+    }
+}

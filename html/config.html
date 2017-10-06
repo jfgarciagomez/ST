@@ -3,7 +3,8 @@
     <head>
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <meta charset="utf-8">
-        <title> "Conf" </title>
+        <title> "Configuración" </title>
+        <script type="text/javascript" src="js/index.js"></script>
         <link rel="icon" type="image/png" href="/images/sensoraz.png" />
     </head>
     <body>
@@ -14,7 +15,8 @@
             </h1>
         </header>
         <div class="dHabC1">
-            <form id="f1" class="f1"  oninput="dif.value=parseInt(tmax.value)-parseInt(tmin.value)">
+            <!--<form id="f1" class="f1"  oninput="dif.value=parseInt(tmax.value)-parseInt(tmin.value)">-->
+            <form id="f1" class="f1"  oninput="dif.value=diferencia(tmax.value ,tmin.value)">
                 <h2 class="h2C1" style="margin=1">Datos de la habitación</h2>
                 País <input list="pais" name="pais" class="datalist-input" />
                 <datalist id="pais">
@@ -290,16 +292,16 @@
                     Temperatura máxima
                     <br>
                     <div class="temp">
-                        <input type="number" id="tmax" name="tmax" value="22" max="50"/>
+                        <input type="number" id="tmax" name="tmax" value="22" max="50" min="-2"/>
                         <br>
                         Temperatura mínima
                         <br>
-                        <input type="number" id="tmin" name="tmin" value="22" min="-2" />
+                        <input type="number" id="tmin" name="tmin" value="22" min="-2" max="50"/>
                     </div>
                     <div class="dife">
-                        Diferencia
+                        Diferencia:
                         <br>
-                        <output name="dif" for="tmax tmin"></output>º
+                        <output name="dif" for="tmax tmin"></output>
                     </div>
                 </div>
             </form>
