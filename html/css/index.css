@@ -180,16 +180,15 @@ hr {
     color:hotpink;
     margin:0px;
     padding:0;
-/***************************   ERROR404.HTML ***********************/
-.uk{
-    text-align:center;
-    font-size: 500%;
 }
-.dHabE1{
-    background-color:darkBlue;
-    color:white;
-    width:100%;
-    height:265px;
+/***************************   ERROR404.HTML ***********************/
+.error{
     text-align:center;
-    font-size: 500%;
+    font-size: 1000%;
+    margin: 0px;
+}
+.ems{
+    text-align:center;
+    font-size: 250%;
+    margin: 0px;
 }
