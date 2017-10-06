@@ -20,7 +20,7 @@ function normal(imag) {
 
 function diferencia (max, min){
     if(max<=min){
-        return err="La temperatura mínima "+ min.toString()+", debe ser menor que la máxima"+ max.toString()+".";
+        return err="La temperatura mínima "+ min.toString()+", debe ser menor que la máxima "+ max.toString()+".";
     }
     else{
         num = max-min;
