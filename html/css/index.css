@@ -131,6 +131,7 @@ th{
 }
 
 .f1{
+    -moz-columns: 2;
     column-count: 2;
     column-rule:2px groove orange;
     height:100%;
