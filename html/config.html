@@ -16,7 +16,7 @@
         </header>
         <div class="dHabC1">
             <!--<form id="f1" class="f1"  oninput="dif.value=parseInt(tmax.value)-parseInt(tmin.value)">-->
-            <form id="f1" class="f1"  oninput="dif.value=diferencia(tmax.value ,tmin.value)">
+            <form id="f1" class="f1"  oninput="dif.value=diferencia(tmax ,tmin)">
                 <h2 class="h2C1" style="margin=1">Datos de la habitación</h2>
                 País <input list="pais" name="pais" class="datalist-input" />
                 <datalist id="pais">
@@ -292,14 +292,14 @@
                     Temperatura máxima
                     <br>
                     <div class="temp">
-                        <input type="number" id="tmax" name="tmax" value="22" max="50" min="10"/>
+                        <input type="number" id="tmax" name="tmax" value="27" max="50" min="10"/>
                         <br>
                         Temperatura mínima
                         <br>
-                        <input type="number" id="tmin" name="tmin" value="22" min="10" max="50"/>
+                        <input type="number" id="tmin" name="tmin" value="27" min="10" max="50"/>
                     </div>
                     <div class="dife">
-                        <output name="dif" for="tmax tmin"></output>
+                      <output name="dif" for="tmax tmin"></output>
                     </div>
                 </div>
             </form>

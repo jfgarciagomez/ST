@@ -1,7 +1,15 @@
 function mostrarN(dir){
     a = dir;
     a = a.substring(1);
-    dat = a.split("&");function aumentar(imag) {
+    dat = a.split("&");
+    nom = dat[0].split("=");
+    fto = dat[1].split("=");
+    document.getElementById("nombr").innerHTML = "Hola " + nom[1]+ ": Bienvenido a smartroom.";
+    salida = "Hola " + nom[1]+ ": Bienvenido a smartroom.";
+    return  salida;
+}
+
+function aumentar(imag) {
     imag.style.height = "120px";
     imag.style.width = "px";
 }
@@ -11,14 +19,27 @@ function normal(imag) {
     imag.style.width = "px";
 }
 
-    nom = dat[0].split("=");
-    fto = dat[1].split("=");
-    document.getElementById("nombr").innerHTML = "Hola " + nom[1]+ ": Bienvenido a smartroom.";
-    salida = "Hola " + nom[1]+ ": Bienvenido a smartroom.";
-    return  salida;
-}
 
-function diferencia (max, min){
+function diferencia (tmax, tmin){
+    //max.style.color = "blue";
+    var max = tmax.value;
+    var min = tmin.value;
+    if( min<26  || max<26 || min > 28 || max > 28){
+        alert("La temperatura tiene que estar entre 28º y 26º");
+    }
+    if( max <26 || max > 28 ){
+        //alert("La temperatura tiene que estar entre 28º y 26º");.
+        tmax.style.color = "red";
+    }
+    else{
+        tmax.style.color = "black";
+    }
+    if( min<26 || min > 28){
+        tmin.style.color = "red";
+    }
+    else{
+        tmin.style.color = "black";
+    }
     if(max<=min){
         return err="La temperatura mínima "+ min.toString()+", debe ser menor que la máxima "+ max.toString()+".";
     }
@@ -27,3 +48,4 @@ function diferencia (max, min){
         return dif="Diferencia: "+ num.toString()+"º";
     }
 }
+
