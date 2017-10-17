@@ -273,7 +273,16 @@
                 Foto:
                 <br>
                 <input class="boton" type="file" name="foto"/>
-                <br>Password: <input type="password" name="pass"/>
+                <div>
+                    <div class="temp">
+                        <br>Password: <input type="password" id="pass" name="pass" onkeyup="cont(this, barra, nivels)"/>
+                        <div class="barra" id="barra" name="barra"></div>
+                    </div>
+                    <div class="dife">
+                        <p id="nivels" name="nivels"></p>
+                    </div>
+                </div>
+                <br><br><br>
                 <hr>
                 <input class="boton" type="submit" value="Enviar datos"/>
                 <br>

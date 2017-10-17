@@ -49,3 +49,28 @@ function diferencia (tmax, tmin){
     }
 }
 
+function cont (con, cuadro, nivel){
+    //alert("contrase"+con.value);
+    nivel.value="rojo";
+    longitud = 8;
+    calidad = "Contraseña insegura. Aumenta la longitud";
+    cuadro.style.width= longitud * con.value.length;
+    if(con.value.length < 5){
+        //alert("contraseña muy devil nivel "+calidad);
+        cuadro.style.background="red";
+    }
+    else if (con.value.length < 8){
+        calidad = "yellow";
+        cuadro.style.background="yellow";
+        calidad="Poco segura, se recomienda aumentar la longitud";
+        //alert("contraseña nivel "+calidad);
+    }
+    else{
+        calidad = "green";
+        //alert("contraseña nivel "+calidad);
+        cuadro.style.background="green";
+        calidad="contraseña de tamaño aceptable";
+    }
+    document.getElementById("nivels").innerHTML = calidad;
+}
+

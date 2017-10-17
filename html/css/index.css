@@ -160,6 +160,15 @@ hr {
     float:right;
     text-align:center;
 }
+.barra{
+    width:10px;
+    background:white;
+    height:4px;
+    border-left: solid darkBlue 70px;
+    border-top: solid darkBlue 2px;
+
+}
+
 /***************************   MINOMBRE.HTML ***********************/
 .f2{
     text-align:center;
@@ -182,6 +191,7 @@ hr {
     margin:0px;
     padding:0;
 }
+
 /***************************   ERROR404.HTML ***********************/
 .error{
     text-align:center;
