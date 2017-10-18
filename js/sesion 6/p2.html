@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){a=1;
+            $("button").click(function(){
+            if(a){
+              $("#d1").animate({left: '250px',height: '300px',width: '300px'}, "slow");
+              a-=1;
+            }
+            else{
+              $("#d1").animate({left: '-=250px',height: '100px',width: '100px'}, "slow");
+              a+=1;
+            }
+            });
+            });
+        </script>
+    </head>
+    <body>
+        <button>MOVER</button>
+        <br>
+        <br>
+        <div id="d1" style="background:red;height:100px;width:100px;position:absolute;"></div>
+    </body>
+</html>
