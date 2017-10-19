@@ -50,8 +50,6 @@ function diferencia (tmax, tmin){
 }
 
 function cont (con, cuadro, nivel){
-    //alert("contrase"+con.value);
-    nivel.value="rojo";
     longitud = 8;
     calidad = "Contraseña insegura. Aumenta la longitud";
     cuadro.style.width= longitud * con.value.length;
@@ -70,6 +68,25 @@ function cont (con, cuadro, nivel){
         //alert("contraseña nivel "+calidad);
         cuadro.style.background="green";
         calidad="contraseña de tamaño aceptable";
+    }
+    nivel.value=calidad;
+    document.getElementById("nivels").innerHTML = calidad;
+}
+
+
+function pstest(con, cuadro, nivel){
+    var calidad=nivel.value;
+    var passw=  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{5,25}$/;
+    if((con.value.match(passw))){
+        calidad=calidad + "y segura";
+        //alert('Correct,'+calidad);
+    }
+    else{
+        calidad=calidad + ", pero debe tener al menos una mayuscula, minuscula, número y un caracter especial permitido";
+        //alert('Wrong...!'+calidad);
+        document.getElementById("pass").value= "";
+        cuadro.style.width= "4px";
+        cuadro.style.background="white";
     }
     document.getElementById("nivels").innerHTML = calidad;
 }
