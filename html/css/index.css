@@ -168,6 +168,14 @@ hr {
     border-top: solid darkBlue 2px;
 
 }
+.gps{
+    width:200;
+    color:#BDBDBD;
+}
+.mapa{
+    margin-left: 10px;
+    width:425;
+}
 
 /***************************   MINOMBRE.HTML ***********************/
 .f2{

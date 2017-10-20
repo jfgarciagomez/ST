@@ -91,3 +91,57 @@ function pstest(con, cuadro, nivel){
     document.getElementById("nivels").innerHTML = calidad;
 }
 
+function gpscolor(coor){
+    coor.style.color="black";
+}
+
+function gpsclear(coor){
+    document.getElementById("gps").value= "";
+}
+
+function gps2url(coor){
+    var patron= /^([-+]?)(90|[0-8]\d)(\xBA|\xB0)\d\d\x27\d\d\x22,\s([-+]?)(180|1[0-7]\d|0\d\d)(\xBA|\xB0)\d\d\x27\d\d\x22$/;
+    if(coor.value.match(patron)){
+        var coor1 = coor.value;
+        coor1=coor1.replace(" ","");
+        //alert('Correct,'+coor1);
+        coor1=coor1.split(",");
+        var coor2 = coor1[1];
+        coor1=coor1[0];
+        var url = "https://maps.google.com/maps?q=";
+        //url=url+adaptecoor(coor1)+","+adaptecoor(coor2);
+        alert('url='+url);
+        document.getElementById("map").value= url;
+    }
+    else{
+        alert("Las coordenadas tienes que estar expresadas en GGºMM'SS\"");
+        gpsclear();
+    }
+}
+
+function adaptecoor(coor){
+    if(coor[0]!="+"){
+        coor="+"+coor;
+    }
+    coor=coor.replace("°","°+");
+    coor=coor.replace("º","°+");
+    coor=coor.replace("\'","\'+");
+    return coor;
+}
+
+function mailcolor(mail){
+    mail.style.color="black";
+}
+
+function mailclear(mail){
+    document.getElementById("mail").value= "";
+}
+
+function checkmail(mail){
+    var patron= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(!mail.value.match(patron)){
+        alert("Correo incorrecto");
+        mailclear();
+    }
+}
+

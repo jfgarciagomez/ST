@@ -4,13 +4,8 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <meta charset="utf-8">
         <title> "Mi nombre" </title>
+        <script type="text/javascript" src="js/index.js"></script>
         <link rel="icon" type="image/png" href="/images/sensoraz.png" />
-        <!--<script>
-            function funcion{
-                var fname = document.getElementById("nombre");
-                document.getElementById("demo").innerHTML = "Bienvenido: " + fname.value;
-            }
-        </script>-->
     </head>
     <body>
         <header>
@@ -25,6 +20,8 @@
                     <br>
                     Nombre:<input type="text" name="nombre" id="nombre"/>
                     <br>
+                    <br>
+                    E-mail: <input class="gps" type="text" name="mail" id="mail" onkeyup="mailcolor(this)" onclick="mailclear(this)" onchange="checkmail(this)" value="nombre@dominio.com"/>
                     <br>
                     <br>
                 </div>
