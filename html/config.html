@@ -18,7 +18,7 @@
             <!--<form id="f1" class="f1"  oninput="dif.value=parseInt(tmax.value)-parseInt(tmin.value)">-->
             <form id="f1" class="f1"  oninput="dif.value=diferencia(tmax ,tmin)">
                 <h2 class="h2C1" style="margin=1">Datos de la habitación</h2>
-                País <input list="pais" name="pais" class="datalist-input" />
+                País <input list="pais" name="pais"  class="datalist-input" onchange="checkpais(this)" />
                 <datalist id="pais">
                     <option value="Afghanistan" />
                     <option value="Albania" />
