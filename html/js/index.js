@@ -109,8 +109,8 @@ function gps2url(coor){
         var coor2 = coor1[1];
         coor1=coor1[0];
         var url = "https://maps.google.com/maps?q=";
-        //url=url+adaptecoor(coor1)+","+adaptecoor(coor2);
-        alert('url='+url);
+        url=url+adaptecoor(coor1)+","+adaptecoor(coor2);
+        //alert('url='+url);
         document.getElementById("map").value= url;
     }
     else{
@@ -137,6 +137,9 @@ function checkpais(pais){
         alert("País no válido")
         document.getElementsByName("pais")[0].value= "";
     }
+    else{
+        document.getElementsByName("pais")[0].value= p;
+    }
 }
 
 
@@ -156,4 +159,5 @@ function checkmail(mail){
         mailclear();
     }
 }
+
 
