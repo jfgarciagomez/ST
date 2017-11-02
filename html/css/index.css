@@ -216,24 +216,105 @@ hr {
     width: auto;
     height: 200px;
     background: blueviolet;
+    position: relative;
 }
+
+.gcontainer{
+    border: solid darkBlue 30px;
+    height: 220px;
+    background-color:darkBlue;
+}
+
 .div1 {
-    width: 30%;
+    width: auto;
     height: 200px;
     float: inline-start;
     background: blueviolet;
-    border: solid red 10px;
+    border: solid blueviolet 10px;
 }
 .div2 {
     width: auto;
     height: 200px;
     background-color: blueviolet;
-    border: solid #00ffc9 10px;
+    border: solid blueviolet 10px;
     float: inline-start;
 }
 .div3 {
     width: auto;
     float: inline-start;
     height: 200px;
-    border: solid brown 10px;
+    border: solid blueviolet 10px;
+}
+.izq{
+    float: left;
+    background-color: blueviolet;
+    width: 45px;
+    height: 200px;
+    border-left: solid blueviolet 10px;
+    border-top: solid blueviolet 10px;
+    border-bottom: solid blueviolet 10px;
+    line-height: 200px;
+    text-align: center;
+    min-width: 35px;
+    padding: 0;
+    margin: 0;
+}
+.dch{
+    background-color: blueviolet;
+    width: auto;
+    height: 200px;
+    border: solid blueviolet 10px;
+    line-height: 200px;
+    text-align: center;
+    min-width: 35px;
+}
+.flechai{
+    min-width: 10px;
+    height: 90%;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+}
+
+.flechad{
+    min-width: 20px;
+    height: 90%;
+    vertical-align: middle;"
+}
+
+.boti{
+    min-width: 10px;
+    height: 20%;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}
+
+.botd{
+    min-width: 20px;
+    height: 40%;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+     background: transparent;
+}
+
+.h2p{
+    position: absolute;
+    top: 100px;
+
+    width: 100%;
+    color: white;
+
+
+}
+
+.spp{
+
+    font: bold 24px/45px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0px;
 }

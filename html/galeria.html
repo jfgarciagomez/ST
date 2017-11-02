@@ -5,29 +5,44 @@
         <meta charset="utf-8">
         <title> "Mi nombre" </title>
         <script type="text/javascript" src="js/index.js"></script>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <link rel="icon" type="image/png" href="/images/sensoraz.png" />
     </head>
     <body>
         <header>
             <h1 class="h1C1">
-              Nombre
+              GALERIA
             </h1>
         </header>
-        <div style="border: solid black 10px;height: 250px;">
-            <div class="izq" style="float: left;background-color: blueviolet;width: 45px;height: 200px;border: solid green 10px;">
+        <div class="gcontainer">
+            <div class="izq">
+                &nbsp;<button id="bi" class="boti">
+                    <img class="flechai" src="images/fdch.png">
+                </button>
             </div>
             <div class="div1">
-                <img class="img1" src="images/h1.jpg">
+                <img id="i1" class="img1" src="images/h1.jpg">
+                <h2  class="h2p">
+                    <span id="t1" class="spp"></span>
+                </h2>
             </div>
 
             <div class="div3">
-                <img class="img1" src="images/h3.jpg">
+                <img id="i3" class="img1" src="images/h3.jpg">
+                <h2  class="h2p">
+                    <span id="t3" class="spp"></span>
+                </h2>
             </div>
             <div class="div2">
-                <img class="img1" src="images/h2.jpg">
+                <img id="i2" class="img1" src="images/h2.jpg">
+                <h2  class="h2p">
+                    <span id="t2" class="spp"></span>
+                </h2>
             </div>
-            <div class="dch" style="background: blueviolet;width: auto;height: 200px;border: solid yellow 10px;/*! float: right; */line-height: 200px;text-align: center;min-width: 35px;">
-                &nbsp;<img src="images/flecha drecha.png" class="flecha" style="min-width: 20px;height: 40%;vertical-align: middle;">
+            <div class="dch">
+                &nbsp;<button id="bd" class="botd">
+                    <img id="bd" src="images/fizq.png" class="flechad">
+                </button>
             </div>
         </div>
         <nav class="nav">
@@ -43,4 +58,52 @@
             </h2>
         </footer>
     </body>
+        <script>
+            $("#bi").click(function(){
+                    var img ="images/";
+
+                    $("#i1").attr("src","images/h4.jpg");
+                });
+            $("#bd").click(function(){
+                    $( "#i1" ).css({'width' : '150px' , 'height' : '150px'});
+                });
+            $("#i1").mouseover(function(){
+                    $( "#i1" ).css({'width' : '+=10%' , 'height' : '+=10%'});
+                    var n =$("#i1").attr("src");
+                    n = n.split("/");
+                    $("#t1").text( n[1] );
+                });
+            $("#i2").mouseover(function(){
+                    $( "#i2" ).css({'width' : '+=10%' , 'height' : '+=10%'});
+                    var n =$("#i2").attr("src");
+                    n = n.split("/");
+                    $("#t2").text( n[1] );
+                });
+            $("#i3").mouseover(function(){
+                    $( "#i3" ).css({'width' : '+=10%' , 'height' : '+=10%'});
+                    var n =$("#i3").attr("src");
+                    n = n.split("/");
+                    $("#t3").text( n[1] );
+                });
+            $("#i1").mouseout(function(){
+                    $( "#i1" ).css({'width' : '-=10%' , 'height' : '-=10%'});
+                    $("#t1").text("");
+                });
+            $("#i2").mouseout(function(){
+                    $( "#i2" ).css({'width' : '-=10%' , 'height' : '-=10%'});
+                    $("#t2").text("");
+                });
+            $("#i3").mouseout(function(){
+                    $( "#i3" ).css({'width' : '-=10%' , 'height' : '-=10%'});
+                    $("#t3").text("");
+                });
+
+
+        </script>
+
+
+
+
+
+
 </html>
