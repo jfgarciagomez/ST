@@ -74,7 +74,7 @@ ul{
     height:80px;
 }
 
-table{
+.table1{
     border: 1px solid white;
     border-collapse: separate;
     border-spacing: 0px;
@@ -317,4 +317,50 @@ hr {
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.7);
     padding: 0px;
+}
+
+/***************************   TABLAS.HTML ***********************/
+
+.dinT{
+    width:84%;
+    color: white;
+    margin: 0% auto;
+    table-layout: fixed;
+    text-align: center;
+}
+
+.lk{
+    cursor:pointer;
+    text-decoration:underline;
+    color:#00f;
+    padding: 0;
+    border:none;
+    background-color: steelBlue;
+
+}
+
+.tlink{
+    background-color: orange ;
+    margin: 0% auto;
+    width: 60%;
+    table-layout: fixed;
+    padding: 0;
+}
+
+.tcontainer{
+    border: solid darkBlue 30px;
+    height: autopx;
+    background-color:darkBlue;
+    text-align: center;
+
+}
+
+.par{
+    background-color:blueviolet;
+    border:none;
+}
+
+.impar{
+    background-color:purple;
+    border: none;
 }

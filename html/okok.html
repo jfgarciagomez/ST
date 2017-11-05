@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <link rel="stylesheet" type="text/css" href="css/index.css">
+        <meta charset="utf-8">
+        <title> "Mi nombre" </title>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <link rel="icon" type="image/png" href="/images/sensoraz.png" />
+    <script type="text/javascript">
+       ciudades= [["Madrid", 23, 30, 115, 225, true, "FOFFOO"],
+                ["Barcelona", 10, 80, 38, 193,  false, "191970"],
+                ["Valencia", 20, 54, 27, 177, false, "F5FFFA"],
+                ["Sevilla", 23, 56, 66, 253, true, "FFE4E1"],
+                ["Zaragoza", 24, 25, 75, 370, true, "FFE4B5"],
+                ["Malaga", 19, 33, 45, 288, false, "FFDEAD"],
+                ["Murcia", 14, 58, 97, 106, true, "808000"],
+                ["Mallorca", 28, 30, 68, 284, true, "6B8E23"],
+                ["Gran Canaria", 34, 44, 55, 353, false, "FFA500"],
+                ["Bilbao", 13, 38, 88, 232, true, "FF4500"],
+                ["Alicante", 13, 60, 62, 243, true, "DA70D6"],
+                ["Cordoba", 20, 47, 96, 177, false, "EEE8AA"],
+                ["Valladolid", 43, 82, 64, 367, true, "98FB98"],
+                ["Vigo", 27, 57, 89, 139, false, "AFEEEE"],
+                ["Gijon", 23, 32, 56, 210, true, "DB7093"],
+                ["Hospitalet", 31, 10, 85, 225, true, "FFEFD5"],
+                ["Vitoria", 19, 70, 80, 179, false, "FFDAB9"],
+                ["A Coruña", 28, 75, 75, 202, true, "CD853F"],
+                ["Granada", 19, 10, 95, 192, true, "FFC0CB"],
+                ["Elche", 31, 29, 71, 182, false, "DDA0DD"]];
+
+    $(document).ready(function(){
+        /**
+         * Funcion para añadir una nueva columna en la tabla
+         */
+        $("#add").click(function(){
+            // Obtenemos el numero de filas (td) que tiene la primera columna
+            // (tr) del id "tabla"
+            var tds=$("#tabla tr:first td").length;
+            alert (tds);
+            // Obtenemos el total de columnas (tr) del id "tabla"
+            var trs=$("#tabla tr").length;
+            alert (trs);
+            var nuevaFila="<tr>";
+            for(var i=0;i<tds;i++){
+                // añadimos las columnas
+                nuevaFila+="<td>columna "+(i+1)+" Añadida con jquery</td>";
+            }
+            // Añadimos una columna con el numero total de columnas.
+            // Añadimos uno al total, ya que cuando cargamos los valores para la
+            // columna, todavia no esta añadida
+            nuevaFila+="<td>"+(trs+1)+" columnas";
+            nuevaFila+="</tr>";
+            $("#tabla").append(nuevaFila);
+        });
+
+        /**
+         * Funcion para eliminar la ultima columna de la tabla.
+         * Si unicamente queda una columna, esta no sera eliminada
+         */
+        $("#del").click(function(){
+            // Obtenemos el total de columnas (tr) del id "tabla"
+            var trs=$("#tabla tr").length;
+            if(trs>1)
+            {
+                // Eliminamos la ultima columna
+                $("#tabla tr:last").remove();
+            }
+        });
+    });
+    </script>
+
+    <style>
+    #add, #del  {cursor:pointer;text-decoration:underline;color:#00f;}
+    </style>
+</head>
+
+    <body>
+        <header>
+            <h1 class="h1C1">
+              TABLAS
+            </h1>
+        </header>
+        <div class="gcontainer">
+    <table id="tabla" border=1>
+        <tr>
+            <td>primera columma</td>
+            <td>segundo columna</td>
+            <td>primera columma</td>
+            <td>segundo columna</td>
+            <td>primera columma</td>
+            <td>segundo columna</td><td>primera columma</td>
+            <td>segundo columna</td>
+
+            <!-- podemos añadir tantas columnas como deseemos -->
+            <!--<td>tercera columna</td>-->
+        </tr>
+    </table>
+
+        </div>
+            <div id="add">pulsa aquí para añadir una nueva fila desde jquery</div>
+            <div id="del">pulsa aquí para eliminar la ultima fila desde jquery</div>
+
+        <nav class="nav">
+            <div class="divNavC1" style="width=100%">
+                 <p class="tx1" id="span iz">
+                     <a href="index.html">Volver a la página principal</a>
+                 </p>
+            </div>
+        </nav>
+        <footer>
+            <h2>
+              Universidad de Alcala
+            </h2>
+        </footer>
+    </body>
+
+</body>
+</html>
