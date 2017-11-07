@@ -4,145 +4,63 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <meta charset="utf-8">
         <title> "Galeria" </title>
-        <script type="text/javascript" src="js/index.js"></script>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="js/galeria.js"></script>
         <link rel="icon" type="image/png" href="/images/sensoraz.png" />
     </head>
     <body>
-        <header>
-            <h1 class="h1C1">
-              GALERIA
-            </h1>
-        </header>
-        <div class="gcontainer">
-            <div class="izq">
-                &nbsp;<button id="bi" class="boti">
-                    <img class="flechai" src="images/fdch.png">
-                </button>
-            </div>
-            <div class="div1">
-                <img id="i1" class="img1" src="images/h1.jpg">
-                <h2  class="h2p">
-                    <span id="t1" class="spp"></span>
-                </h2>
-            </div>
+        <div id="fondo1" class="fo1">
+            <header>
+                <h1 class="h1C1">
+                  GALERIA
+                </h1>
+            </header>
+            <div class="gcontainer">
+                <div class="izq">
+                    &nbsp;<button id="bi" class="boti">
+                        <img class="flechai" src="images/fdch.png">
+                    </button>
+                </div>
+                <div class="div1">
+                    <img id="i1" class="img1" src="images/h1.jpg">
+                    <h2  class="h2p">
+                        <span id="t1" class="spp"></span>
+                    </h2>
+                </div>
 
-            <div class="div3">
-                <img id="i2" class="img1" src="images/h2.jpg">
-                <h2  class="h2p">
-                    <span id="t2" class="spp"></span>
+                <div class="div3">
+                    <img id="i2" class="img1" src="images/h2.jpg">
+                    <h2  class="h2p">
+                        <span id="t2" class="spp"></span>
+                    </h2>
+                </div>
+                <div class="div2">
+                    <img id="i3" class="img1" src="images/h3.jpg">
+                    <h2  class="h2p">
+                        <span id="t3" class="spp"></span>
+                    </h2>
+                </div>
+                <div class="dch">
+                    &nbsp;<button id="bd" class="botd">
+                        <img id="bd" src="images/fizq.png" class="flechad">
+                    </button>
+                </div>
+            </div>
+            <nav class="nav">
+                <div class="divNavC1" style="width=100%">
+                     <p class="tx1" id="span iz">
+                         <a href="index.html">Volver a la página principal</a>
+                     </p>
+                </div>
+            </nav>
+            <footer>
+                <h2>
+                  Universidad de Alcala
                 </h2>
-            </div>
-            <div class="div2">
-                <img id="i3" class="img1" src="images/h3.jpg">
-                <h2  class="h2p">
-                    <span id="t3" class="spp"></span>
-                </h2>
-            </div>
-            <div class="dch">
-                &nbsp;<button id="bd" class="botd">
-                    <img id="bd" src="images/fizq.png" class="flechad">
-                </button>
-            </div>
+            </footer>
         </div>
-        <nav class="nav">
-            <div class="divNavC1" style="width=100%">
-                 <p class="tx1" id="span iz">
-                     <a href="index.html">Volver a la página principal</a>
-                 </p>
-            </div>
-        </nav>
-        <footer>
-            <h2>
-              Universidad de Alcala
-            </h2>
-        </footer>
+        <div id="fondo2" class="fo2">
+                &nbsp;<img id="gran" class="grande" src="images/h1.png">
+        </div>
     </body>
-
-        <script>
-            $("#bi").click(function(){
-                    var img ="images/h";
-                    var a = $("#i1").attr("src");
-                    var n = "#i0";
-                    n[0]="1";
-                    a = a.split("h");
-                    a = a[1];
-                    a = a.split(".");
-                    a = a[0];
-                    a = parseInt(a);
-                    for(var i=1;i<4;i++){
-                        if(a+1>20){
-                            a = 1;
-                        }
-                        else{
-                            a = a + 1;
-                        }
-                        img = img + a +".jpg";
-                        n = n.substring(0,2);
-                        n=n+i;
-                        $(n).attr("src",img);
-                        img ="images/h";
-                    }
-                });
-            $("#bd").click(function(){
-                    var img ="images/h";
-                    var a = $("#i3").attr("src");
-                    var n = "#i0";
-                    n[0]="1";
-                    a = a.split("h");
-                    a = a[1];
-                    a = a.split(".");
-                    a = a[0];
-                    a = parseInt(a);
-                    for(var i=3;i>0;i--){
-                        if(a<2){
-                            a = 20;
-                        }
-                        else{
-                            a = a - 1;
-                        }
-                        img = img + a +".jpg";
-                        n = n.substring(0,2);
-                        n=n+i;
-                        $(n).attr("src",img);
-                        img ="images/h";
-                    }
-                });
-            $("#i1").mouseover(function(){
-                    $( "#i1" ).css({'width' : '+=10%' , 'height' : '+=10%'});
-                    var n =$("#i1").attr("src");
-                    n = n.split("/");
-                    $("#t1").text( n[1] );
-                });
-            $("#i2").mouseover(function(){
-                    $( "#i2" ).css({'width' : '+=10%' , 'height' : '+=10%'});
-                    var n =$("#i2").attr("src");
-                    n = n.split("/");
-                    $("#t2").text( n[1] );
-                });
-            $("#i3").mouseover(function(){
-                    $( "#i3" ).css({'width' : '+=10%' , 'height' : '+=10%'});
-                    var n =$("#i3").attr("src");
-                    n = n.split("/");
-                    $("#t3").text( n[1] );
-                });
-            $("#i1").mouseout(function(){
-                    $( "#i1" ).css({'width' : '-=10%' , 'height' : '-=10%'});
-                    $("#t1").text("");
-                });
-            $("#i2").mouseout(function(){
-                    $( "#i2" ).css({'width' : '-=10%' , 'height' : '-=10%'});
-                    $("#t2").text("");
-                });
-            $("#i3").mouseout(function(){
-                    $( "#i3" ).css({'width' : '-=10%' , 'height' : '-=10%'});
-                    $("#t3").text("");
-                });
-        </script>
-
-
-
-
-
-
 </html>

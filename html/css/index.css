@@ -212,6 +212,30 @@ hr {
     margin: 0px;
 }
 /***************************   GALERIA.HTML ***********************/
+
+
+.fo1{
+    position: absolute;
+    width:100%;
+}
+
+.fo2{
+    position: absolute;
+    display: none;
+    background: rgba(0,0,0,.85);
+    width:400px;
+    height:200px;
+    text-align: center;
+    line-height: -moz-block-height;
+}
+
+.grande{
+    width:50%;
+    height: auto;
+    opacity: 1;
+    vertical-align: middle;
+}
+
 .img1 {
     width: auto;
     height: 200px;
@@ -222,7 +246,7 @@ hr {
 .gcontainer{
     border: solid darkBlue 30px;
     height: 220px;
-    background-color:darkBlue;
+    background-color:blueviolet;
 }
 
 .div1 {
@@ -267,6 +291,7 @@ hr {
     line-height: 200px;
     text-align: center;
     min-width: 35px;
+    float:right;
 }
 .flechai{
     min-width: 10px;
@@ -279,7 +304,7 @@ hr {
 .flechad{
     min-width: 20px;
     height: 90%;
-    vertical-align: middle;"
+    vertical-align: middle;
 }
 
 .boti{
