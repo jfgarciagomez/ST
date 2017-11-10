@@ -1,6 +1,6 @@
 
 
-$(document).ready(function(){alert("adsf");
+$(document).ready(function(){
     ciudades= [["Madrid", 23, 30, 115, 225, true, "F0FF00"],
         ["Barcelona", 10, 80, 38, 193,  false, "191970"],
         ["Valencia", 20, 54, 27, 177, false, "F5FFFA"],
@@ -20,7 +20,7 @@ $(document).ready(function(){alert("adsf");
         ["Vitoria", 19, 70, 80, 179, false, "FFDAB9"],
         ["A Coruña", 28, 75, 75, 202, true, "CD853F"],
         ["Granada", 19, 10, 95, 192, true, "FFC0CB"],
-                        ["Granada", 19, 10, 95, 192, true, "FFC0CB"],
+                  //      ["Granada", 19, 10, 95, 192, true, "FFC0CB"],
         ["Elche", 31, 29, 71, 182, false, "DDA0DD"]];
 
     rellenarL(ciudades);

@@ -252,6 +252,7 @@ hr {
 .div1 {
     width: auto;
     height: 200px;
+    float: left;
     float: inline-start;
     background: blueviolet;
     border: solid blueviolet 10px;
@@ -261,6 +262,7 @@ hr {
     height: 200px;
     background-color: blueviolet;
     border: solid blueviolet 10px;
+    float : left;
     float: inline-start;
 }
 .div3 {
