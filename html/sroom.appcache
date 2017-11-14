@@ -9,6 +9,8 @@ index.html
 config.html
 minombre.html
 css/index.css
+tablas.html
+galeria.html
 
 # static.html will be served if main.py is inaccessible
 # offline.jpg will be served in place of all images in images/large/

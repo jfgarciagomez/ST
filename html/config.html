@@ -4,7 +4,7 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <meta charset="utf-8">
         <title> "Configuración" </title>
-        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/config.js"></script>
         <link rel="icon" type="image/png" href="/images/sensoraz.png" />
     </head>
     <body>
@@ -262,7 +262,10 @@
                     <option value="Zimbabwe" />
                 </datalist>
                 <br>
-                Ciudad:<input type="text" name="ciudad"/>
+                Ciudad:<input list="citi" type="text" name="ciudad"/>
+                <datalist id="citi">
+
+                </datalist>
                 <br>
                 Coordenadas GPS:<input class="gps" type="text" name="gps" id="gps" onkeyup="gpscolor(this)" onclick="gpsclear(this)" onchange="gps2url(this)" value="±GGºMM'SS&quot,±GGGºMM'SS&quot"/>
                 <br>
