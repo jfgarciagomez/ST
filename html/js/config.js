@@ -142,13 +142,15 @@ function cargarciudades(pais){
                     var xmlC = xmlt.responseXML;
                     var nuevaf="";
                     var w = xmlC.getElementById(pais);
-                    var y = w.getAttributeNode("id");
-                    var x = w.childNodes;
-                    for(var j=0;j<x.length;j++){
-                        alert(x[j].childNodes[0].nodeValue)
-                        nuevaf=nuevaf+"<option value=\""+x[j].childNodes[0].nodeValue+"\"/>";
-                    }alert(nuevaf);
-                    document.getElementById('citi').innerHTML = nuevaf;
+                    if(w!=null){
+                        var y = w.getAttributeNode("id");
+                        var x = w.childNodes;
+                        for(var j=0;j<x.length;j++){
+                            nuevaf=nuevaf+"<option value=\""+x[j].childNodes[0].nodeValue+"\"/>";
+                        }
+                        document.getElementById('citi').innerHTML = nuevaf;
+                    }
+
             }
         };
         xmlt.open('GET', 'ciudades.xml', true);

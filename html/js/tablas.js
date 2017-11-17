@@ -24,24 +24,28 @@ $(document).ready(function(){
 
     dats=["Hotel", "Temperatura", "Humedad", "Ruido", "Nivel de luz", "Movimiento", "Color luz"];
 ciudades=[];
-    datos=[];
 
+    datos=[];
+//document.getElementById("npag").value);
     obtainDt();
     //alert(toXml(ciudads));
     //alert("datos1: "+datos)
    // alert(datos.length);
-    tablap();
-    rellenarT(0,"#p1");
+   // tablap();
+    //rellenarT(0,"#p1");
+    //var mfimas=document.getElementById('nmax').value;
+    //alert (mfimas)
+    //function nfil()
 
 
 
-
-    function tablap(){
+/*
+    function tablap(numero){
         rellenarCAb(datos);
-        rellenarL(ciudades);
+        rellenarL(ciudades, numero);
     }
 
-
+*/
     function obtainDt(){
         if (window.XMLHttpRequest) {
             // codigo para IE7+, Firefox, Chrome, Opera, Safari
@@ -56,6 +60,7 @@ ciudades=[];
                 obtainInf(xmlt);
                /* var tx=xmlt.responseText;
                 var res=tx.replace(/<\?\w*\?>/g,"");
+                tx=tx.replace(/>/g,">mn.,kl");
                 res=tx.replace(/<\//g,"2");
                 res=res.replace(/</g,"1");
                 res=res.replace(/>/g,"3");
@@ -64,7 +69,7 @@ ciudades=[];
                 res=res.replace(/\n/g,"");
                 res=res.replace(/\n/g,"");
                 res=res.replace(/\s/g,"");
-                */
+*/
                 //var tx=xmlt.responseXML;
                 //var xxx=xmlt.childNodes;
                 //tx = xmlt.documentElement.childNodes;
@@ -73,8 +78,8 @@ ciudades=[];
                 //alert("res="+xx);
             }
         };
-        xmlt.open('GET', 'tablas.xml', true);
-        xmlt.send(null);
+        xmlt.open('GET', 'coches.xml', true);
+        xmlt.send();
     }
 
     function obtainInf(st){
@@ -142,6 +147,13 @@ ciudades=[];
         //}
         ciudades=aux2;
         datos=aux1;
+
+        rellenarCAb(aux1);
+        rellenarL(aux2);
+        //var nufi = document.getElementById("npag").value;
+        //rellenarT(0,"#p1", nufi);
+
+        rellenarT(0,"#p1");
        // alert("datos: "+datos)
     };
 
@@ -159,12 +171,15 @@ ciudades=[];
     };
 
 
-    $("th").filter(".lk").click(function(){
+    $("th").filter(".lk").click(function(){alert("julio");
         var aux="#"+$(this).attr("id");
+        var nume= document.getElementById('pag').value;
         var norig=aux.split("p");
         norig=norig[1];
         norig=(parseInt(norig)-1)*5;
-        borrart();
+        borrart("#tablad tr");
+        //var nufi = document.getElementById("npag").value;
+        //rellenarT(norig, aux, nufi);
         rellenarT(norig, aux);
     });
 
@@ -213,7 +228,8 @@ ciudades=[];
 
     function rellenarL(cad){
         var num=cad.length;
-        num=num/5;
+        var nin=document.getElementById("npag").value;
+        num=num/nin;
         var nuevaf ="<tr>";
         for (var i=0;i<num;i++){
             nuevaf=nuevaf+"<th id=\"p"+(i+1)+"\" class=\"lk\">"+"Página "+(i+1)+"</th>";
@@ -223,7 +239,9 @@ ciudades=[];
     };
 
 
+    //function rellenarT(Norigen, a, numfila){
     function rellenarT(Norigen, a){
+        var numfila=document.getElementById("npag").value;
         for(var j=1;j<6;j++){
             var id="#p";
             id=id+j;
@@ -231,7 +249,7 @@ ciudades=[];
         }
         $(a).css("background-color", "CornflowerBlue");
         var numeroColumnas =$("#tablad tr:first th").length;
-        for (var i=Norigen;i<(Norigen+5);i++){
+        for (var i=Norigen;i<(Norigen+numfila);i++){
             n=addfila(numeroColumnas, i);
             $("#tablad").append(n);
         }
@@ -264,19 +282,38 @@ ciudades=[];
         }
         nuevafila=nuevafila+"</tr>";
         return nuevafila;
-    }
+    };
 
-    function borrart(){
-        var trs=$("#tablad tr").length;
+    function borrart(tab){
+        var trs=$(tab).length;
         var i;
         for (i=1;i<trs;i++){
-            borrarf();
-        }
-    }
-
-    function borrarf(){
-        if(($("#tablad tr").length)>1){
-            $("#tablad tr:last").remove();
+            borrarf(tab);
         }
     };
+
+    function borrarf(tab){
+        if(($(tab).length)>1){
+            $(tab+":last").remove();
+        }
+    };
+
+  //  function cambioC(numpaginas);{
+//alert(numpaginas);
+
+        //rellenarT(0,"#p1", numpaginas);
+        //rellenarT(0,"#p1");
+
+    //};
+    $("#npag").change(function(){
+
+        borrart("#tablad tr");
+        //borrart("#tablalinks tr");
+        $("#tablalinks tr:last").remove();
+        rellenarL(ciudades);
+        rellenarT(0,"#p1");
+    });
 });
+//function cambioC(np){
+//            alert("dentro");
+//        };

@@ -5,17 +5,24 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <meta charset="utf-8">
         <title> "Tablas" </title>
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <!--<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+        <script src="https://code.jquery.com/jquery-1.12.1.js"></script>-->
+        <script type="text/javascript" src="js/jquery-1.12.1.js"></script>
         <script type="text/javascript" src="js/tablas.js"></script>
         <link rel="icon" type="image/png" href="/images/sensoraz.png" />
     </head>
     <body>
         <header>
-            <h1 class="h1C1">
+            <h1 id="titu" class="h1C1">
               TABLAS
             </h1>
         </header>
         <div class="tcontainer">
+            <p class="pr1">Seleccione número de páginas a mostrar:</p>
+            <input type="number" id="npag" name="npag" value="5" min="2" max="50" onchange="cambioC(npag)"/>
+            <br>
+            <br>
             <table id="tablad" Class="dinT">
              <!--   <tr>
                     <th>Hotel</th>

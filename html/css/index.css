@@ -381,7 +381,9 @@ hr {
     text-align: center;
 
 }
-
+.pr1{
+    color: white;
+}
 .par{
     background-color:blueviolet;
     border:none;
@@ -391,3 +393,4 @@ hr {
     background-color:purple;
     border: none;
 }
+
