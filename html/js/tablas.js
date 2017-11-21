@@ -61,6 +61,7 @@ ciudades=[];
                /* var tx=xmlt.responseText;
                 var res=tx.replace(/<\?\w*\?>/g,"");
                 tx=tx.replace(/>/g,">mn.,kl");
+                tx=tx.replace(/</g,">mn.,kl");
                 res=tx.replace(/<\//g,"2");
                 res=res.replace(/</g,"1");
                 res=res.replace(/>/g,"3");
